@@ -1,5 +1,5 @@
 const script = document.createElement("script");
-script.src = chrome.runtime.getURL("../../dist/inject.bundle.js");
+script.src = chrome.runtime.getURL("inject.js");
 document.body.appendChild(script);
 
 console.log("Content Script Loaded");
