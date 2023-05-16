@@ -5,9 +5,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const entry = {
   index: "./src/scripts/index.ts",
-  // content: "./src/scripts/content.ts",
-  // background: "./src/scripts/background.ts",
-  // inject: "./src/scripts/inject.ts",
+  content: "./src/scripts/content.ts",
+  background: "./src/scripts/background.ts",
+  inject: "./src/scripts/inject.ts",
 };
 const plugins = [
   new HtmlWebpackPlugin({
@@ -17,7 +17,7 @@ const plugins = [
   }),
   new CopyPlugin({
     patterns: [
-      { from: "src/public/manifest.json", to: "[name][ext]" },
+      { from: "src/manifest.json", to: "[name][ext]" },
       { from: "src/public", to: "public" },
     ],
   }),
