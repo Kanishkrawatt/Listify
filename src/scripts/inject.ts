@@ -1,6 +1,6 @@
 const originalLog = console.log;
 function myLog(...args: string[]) {
-  localStorage.setItem("logData", [...(args as string[])].join(" "));
+  window.postMessage({ type: "NEW_LOG", text: args.join("") }, "*");
   originalLog("[NewLog Says]", ...args);
 }
 console.log = myLog;

@@ -1,1 +1,1 @@
-(()=>{const o=console.log;console.log=function(...l){localStorage.setItem("logData",[...l].join(" ")),o("[NewLog Says]",...l)}})();
+(()=>{const o=console.log;console.log=function(...e){window.postMessage({type:"NEW_LOG",text:e.join("")},"*"),o("[NewLog Says]",...e)}})();
